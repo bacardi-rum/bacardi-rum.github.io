@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rules SYSTEM "https://resources.jetbrains.com/writerside/1.0/redirection-rules.dtd">
+<rules>
+    <!-- format is as follows
+    <rule id="<unique id>">
+        <accepts>page.html</accepts>
+    </rule>
+    -->
+    <rule id="447bfcdf">
+        <description>Created after removal of "阿里巴巴" from Help Instance</description>
+        <accepts>阿里巴巴.html</accepts>
+    </rule>
+    <rule id="7eee9275">
+        <description>Created after removal of "This is the first topic" from Help Instance</description>
+        <accepts>Default-topic.html</accepts>
+    </rule>
+    <rule id="71f79dfe">
+        <description>Created after removal of "How to" from Help Instance</description>
+        <accepts>How-to.html</accepts>
+    </rule>
+</rules>

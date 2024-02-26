@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE instance-profile
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/product-profile.dtd">
+
+<instance-profile id="hi"
+                 name="Help Instance"
+                 start-page="Overview.md">
+
+    <toc-element topic="Overview.md"/>
+    <toc-element topic="面试经验.md">
+        <toc-element topic="2024-01-26-周一.md"/>
+    </toc-element>
+</instance-profile>
