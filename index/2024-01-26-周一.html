@@ -1,0 +1,98 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US" data-colors-preset="contrast" data-primary-color="#307FFF"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="robots" content="noindex"><meta name="built-on" content="2024-02-26T16:18:52.051556"><title>2024.01.26 周一 | Help Instance</title><script type="application/json" id="virtual-toc-data">[{"id":"15218ff0_77","level":0,"title":"技术题目","anchor":"#15218ff0_77"},{"id":"15218ff0_103","level":0,"title":"常规的问题","anchor":"#15218ff0_103"},{"id":"15218ff0_110","level":0,"title":"反问","anchor":"#15218ff0_110"}]</script><script type="application/json" id="topic-shortcuts"></script><link href="https://resources.jetbrains.com/writerside/apidoc/6.6.6-b205/app.css" rel="stylesheet"><link rel="apple-touch-icon" sizes="180x180" href="https://jetbrains.com/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="https://jetbrains.com/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="https://jetbrains.com/favicon-16x16.png"><link rel="manifest" href="site.webmanifest"><meta name="msapplication-TileColor" content="#000000"><meta name="msapplication-TileImage" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-144x144.png"><meta name="msapplication-square70x70logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-70x70.png"><meta name="msapplication-square150x150logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-150x150.png"><meta name="msapplication-wide310x150logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-310x150.png"><meta name="msapplication-square310x310logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-310x310.png"><meta name="image" content=""><!-- Open Graph --><meta property="og:title" content="2024.01.26 周一 | Help Instance"><meta property="og:description" content=""><meta property="og:image" content=""><meta property="og:site_name" content="Help Instance Help"><meta property="og:type" content="website"><meta property="og:locale" content="en_US"><meta property="og:url" content="2024-01-26-周一.html"><!-- End Open Graph --><!-- Twitter Card --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content=""><meta name="twitter:title" content="2024.01.26 周一 | Help Instance"><meta name="twitter:description" content=""><meta name="twitter:creator" content=""><meta name="twitter:image:src" content=""><!-- End Twitter Card --><!-- Schema.org WebPage --><script type="application/ld+json">{
+    "@context": "http://schema.org",
+    "@type": "WebPage",
+    "@id": "2024-01-26-周一.html#webpage",
+    "url": "2024-01-26-周一.html",
+    "name": "2024.01.26 周一 | Help Instance",
+    "description": "",
+    "image": "",
+    "inLanguage":"en-US"
+}</script><!-- End Schema.org --><!-- Schema.org WebSite --><script type="application/ld+json">{
+    "@type": "WebSite",
+    "@id": "/#website",
+    "url": "/",
+    "name": "Help Instance Help"
+}</script><!-- End Schema.org --></head><body data-id="2024-01-26-周一" data-main-title="2024.01.26 周一" data-article-props="{&quot;seeAlsoStyle&quot;:&quot;links&quot;}" data-template="article" data-breadcrumbs="面试经验.md|面试经验"><div class="wrapper"><main class="panel _main"><header class="panel__header"><div class="container"><h3>Help Instance  Help</h3><div class="panel-trigger"></div></div></header><section class="panel__content"><div class="container"><article class="article" data-shortcut-switcher="inactive"><h1 data-toc="2024-01-26-周一" id="2024-01-26-周一.md">2024.01.26 周一</h1><div class="table-wrapper"><table class="wide" id="15218ff0_59"><thead><tr class="ijRowHead" id="15218ff0_60"><th id="15218ff0_61"><p>公司</p></th><th id="15218ff0_62"><p>阿里巴巴</p></th></tr></thead><tbody><tr id="15218ff0_63"><td id="15218ff0_64"><p>岗位</p></td><td id="15218ff0_65"><p>前端开发</p></td></tr><tr id="15218ff0_66"><td id="15218ff0_67"><p>部门</p></td><td id="15218ff0_68"><p>淘宝交易</p></td></tr><tr id="15218ff0_69"><td id="15218ff0_70"><p>时间</p></td><td id="15218ff0_71"><p>上午 10:00</p></td></tr><tr id="15218ff0_72"><td id="15218ff0_73"><p>面试官</p></td><td id="15218ff0_74"><p>清锐</p></td></tr></tbody></table></div><p id="15218ff0_75">这个岗位是脉脉上的猎头联系的，薪资范围在 20k ~ 25k，对应职级 P5。</p><figure id="15218ff0_76"><img alt="JD" src="images/WechatIMG17.jpg" title="JD" width="855" height="282"></figure><section class="chapter"><h2 id="15218ff0_77" data-toc="15218ff0_77">技术题目</h2><section class="chapter"><h3 id="15218ff0_78" data-toc="15218ff0_78">链式延迟调用</h3><p id="15218ff0_79"><a href="https://juejin.cn/post/6940564194987081741" id="15218ff0_80" data-external="true" rel="noopener noreferrer">掘金</a> ，大概的意思就是实现延迟输出的链式调用。</p><div class="code-block" data-lang="ts">
+new Monkey('Alfred').eat('banana').sleep(4).eat('apple').sleep(2).eat('pear')
+/*
+my name is Alfred
+I eat banana
+(wait for 4 seconds)
+I eat apple
+(wait for 2 seconds)
+I eat pear
+*/
+</div><section class="chapter"><h4 id="15218ff0_82" data-toc="15218ff0_82">同步阻塞的方式</h4><div class="code-block" data-lang="ts">
+class Monkey {
+    constructor(name) {
+        console.log(`my name is ${name}`);
+    }
+    
+    eat(food) {
+        console.log(`I eat ${food}`);
+    }
+    
+    sleep(time) {
+        const start = performance.now();
+        while (performance.now() - start &lt; time * 1000) {} // 阻塞主进程
+        return this;
+    }
+}
+</div></section><section class="chapter"><h4 id="performance-now-date-now" data-toc="performance-now-date-now">performance.now() 和 Date.now() 的区别？</h4><p id="15218ff0_84">精度不同，时间起点不同。</p></section><section class="chapter"><h4 id="n-while-true" data-toc="n-while-true">一定时间内，n 在 while true 中自增，最终会变成多少？</h4><p id="15218ff0_85">与 CPU 指令周期有关，不同机器不同 CPU 结果不同。</p></section><section class="chapter"><h4 id="15218ff0_86" data-toc="15218ff0_86">异步不阻塞主进程的形式呢？</h4><p id="15218ff0_87">没写出来。</p><section class="chapter"><h5 id="promise" data-toc="promise">使用 Promise 实现</h5><div class="code-block" data-lang="ts">
+class PromiseMonkey {
+    protected queue = Promise.resolve();
+
+    constructor(name: string) {
+        console.log(`my name is ${name}`);
+    }
+
+    public eat(food: string) {
+        this.queue = this.queue.then(() =&gt; {
+            console.log(`I eat ${food}`);
+        })
+        return this;
+    }
+
+    public sleep(time: number) {
+        this.queue = this.queue.then(() =&gt; {
+            return new Promise(resolve =&gt; {
+                setTimeout(() =&gt; {
+                    resolve();
+                }, time * 1000)
+            })
+        })
+        return this;
+    }
+}
+</div></section><section class="chapter"><h5 id="settimeout" data-toc="settimeout">使用 setTimeout 实现</h5><div class="code-block" data-lang="ts">
+class TimeoutMonkey {
+    protected queue: (() =&gt; void)[] = [];
+
+    constructor(name: string) {
+        console.log(`my name is ${name}`);
+        setTimeout(() =&gt; this.next());
+    }
+
+    public eat(food: string) {
+        this.queue.push(() =&gt; {
+            console.log(`I eat ${food}`);
+            this.next();
+        })
+        return this;
+    }
+
+    public sleep(time: number) {
+        this.queue.push(() =&gt; {
+            setTimeout(() =&gt; {
+                this.next();
+            }, time * 1000);
+        })
+        return this;
+    }
+
+    private next() {
+        this.queue.shift()?.();
+    }
+}
+</div></section></section></section><section class="chapter"><h3 id="onchange-oninput" data-toc="onchange-oninput">onChange 和 onInput 有什么区别</h3><p id="15218ff0_90"><a href="https://juejin.cn/post/6935052374650126350" id="15218ff0_91" data-external="true" rel="noopener noreferrer">掘金</a></p><aside class="prompt" data-type="note" data-title="" id="15218ff0_92"><p id="15218ff0_93">在 DOM 中</p><p id="15218ff0_94">oninput 在输入内容的时候，被持续调用，通过 target.value 可以持续取值，失去焦点和获取焦点不会被调用。</p><p id="15218ff0_95">onchange 在输入期间不会被调用，在失去焦点且失去焦点时的 value 与获得焦点时的 value 不一致（输入内容有变化）的时候才会被调用。</p></aside><aside class="prompt" data-type="tip" data-title="" id="15218ff0_96"><p id="15218ff0_97">在 React 中</p><p id="15218ff0_98">两者在使用上没什么差别，只是 event 的类型不一样。onChange 是 ChangeEvent，onInput 是 InputEvent。因为 onChange 不仅可以用在 HTMLInputElement 还可以用在 Select 等元素上，而 onInput 只能用在输入框类的元素上。</p></aside><p id="15218ff0_99">我把 oninput 给记成 textInput，说可以截获用户输入的字符。估计面试官以为我在胡诌了。</p><aside class="prompt" data-type="warning" data-title="" id="15218ff0_100"><p id="15218ff0_101">textInput 取代 keypress (DOM3)</p></aside><p id="15218ff0_102">用了半个多小时。</p></section></section><section class="chapter"><h2 id="15218ff0_103" data-toc="15218ff0_103">常规的问题</h2><ol class="list _decimal" id="15218ff0_104" type="1"><li class="list__item" id="15218ff0_105"><p>目前公司情况，部门结构</p></li><li class="list__item" id="15218ff0_106"><p>项目难点，项目亮点（感觉回答的一般）</p></li><li class="list__item" id="15218ff0_107"><p>使用 antd 过程中有什么难点</p></li><li class="list__item" id="15218ff0_108"><p>为什么要换工作</p></li><li class="list__item" id="15218ff0_109"><p>微前端（不是很了解），微服务</p></li></ol></section><section class="chapter"><h2 id="15218ff0_110" data-toc="15218ff0_110">反问</h2><ol class="list _decimal" id="15218ff0_111" type="1"><li class="list__item" id="15218ff0_112"><p>部门，负责的事情</p></li><li class="list__item" id="15218ff0_113"><p>如果我在这个岗位上，我的发展目标会是什么样的</p></li></ol></section><div class="last-modified">Last modified: 26 February 2024</div><div data-feedback-placeholder="true"></div><div class="navigation-links _bottom"><a href="面试经验.html" class="navigation-links__prev">面试经验</a></div></article><div id="disqus_thread"></div></div></section></main></div><script src="https://resources.jetbrains.com/writerside/apidoc/6.6.6-b205/app.js"></script></body></html>
